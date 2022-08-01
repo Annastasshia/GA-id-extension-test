@@ -5,6 +5,6 @@ let val = id.toString();
 console.log(val);
 
 if (val !== '') {
-    alert("Your GA id is: " + val);
+    alert("Your url is: https://search.google.com/local/writereview?placeid=" + val);
     window.location.reload();
 }
