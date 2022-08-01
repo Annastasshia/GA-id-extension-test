@@ -1,18 +1,25 @@
+
 {
-    "name": "GA ID Grabber",
-    "description": "A simple way to get your GA id's. Navigate to a business's GMB page and click 'Run' on the extension. The GA id will be copied to your clipboard!",
-    "version": "1.0",
-    "manifest_version": 2,
-    "browser_action": {
-        "default_title": "Click me",
-        "default_popup": "popup.html"
-    },
-    "permissions": [
-        "tabs",
-        "http://*/*",
-        "https://*/*"
-    ],
+    "manifest_version": 3,
+    "name": "ID Extension Test",
+    "version": "0.1",
+    "description": "Just testing some things",
     "icons": {
         "128": "analytics.png"
-    }
+    },  
+    "content_scripts": [
+        {
+            "matches":[ "<all_urls>"],
+            "css": [],
+            "js": ["grabAction.js","grab.js"]
+
+        }
+    ],
+    "action": {
+        "default_icon": {            
+            "128": "analytics.png"
+        },
+        "default_title": "Click Me",   
+        "default_popup": "popup.html"  
+      }
 }
